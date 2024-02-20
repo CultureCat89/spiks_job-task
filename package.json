@@ -1,0 +1,19 @@
+{
+  "name": "spiks_job-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CultureCat89/spiks_job-task.git"
+  },
+  "author": "Maksim Ukhanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CultureCat89/spiks_job-task/issues"
+  },
+  "homepage": "https://github.com/CultureCat89/spiks_job-task#readme"
+}
