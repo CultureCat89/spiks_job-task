@@ -1,16 +1,90 @@
 @import "fonts"
 
-$font-family: "Proxima Nova", sans-serif 
+$font-family: "Proxima Nova", sans-serif
+
+// цвета
+$general-body-font: #fff
+$card-info-background: #171722
+$unactive-body-form: #959595
+
 
 *
   font-family: $font-family
   box-sizing: border-box
   margin: 0
   padding: 0
+  color: $general-body-font
 
-body
+input 
+  all: unset
+  box-sizing: border-box
+
+
+.wrapper
+  max-width: 1489px
+  height: 1140px
+  padding: 22px 37px 0 35px
+  background-color: $card-info-background
+  
+  // временные стили
+  margin: 2rem auto
+  // background-color: #616453
+  // border: 1px #000 solid
+
+.header
+  display: flex
+  align-items: center
+  column-gap: 16px
+  max-width: 1283px
+  height: 48px
   background-color: #171722
-  width: 100%
-  max-width: 1920px
-  height: 100vh
-  max-height: 1140px
+
+  &__title
+    height: 30px
+    width: 172px
+    font-weight: 700
+    font-size: 30px
+    line-height: 100%
+    letter-spacing: 0.01em
+  
+  &__search
+    position: relative
+    width: 469px
+    height: 100%
+    
+    &-magnifier
+      position: absolute
+      width: 21px
+      height: 21px
+      top: 12px
+      left: 20px
+    
+    &-magnifier:hover
+      cursor: pointer
+    
+    &-magnifier:hover svg path
+      fill: $general-body-font
+
+    &-magnifier:active svg path
+      fill: $unactive-body-form
+
+    #search
+      height: 100%
+      width: 100%
+      border-radius: 12px
+      border: 1px $unactive-body-form solid
+      padding: 13px 20px 13px 49px
+    
+    #search::-webkit-search-cancel-button
+      -webkit-appearance: none
+      cursor: pointer
+      width: 24px
+      height: 24px
+      background-image: url("../icons/close-button.svg")
+
+    #search:placeholder
+      color: $unactive-body-form
+
+    #search:focus
+      border-color: $general-body-font
+
