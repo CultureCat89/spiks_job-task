@@ -6,6 +6,14 @@ $font-family: "Proxima Nova", sans-serif
 $general-body-font: #fff
 $card-info-background: #171722
 $unactive-body-form: #959595
+$unactive-input: #353542
+$button-border-gradient: linear-gradient(210deg, rgba(132, 213, 44, 0.36) 0%, rgba(23, 23, 34, 0) 100%)
+$button-shadow: 0 3px 15px 0 rgba(132, 213, 44, 0.2)
+$button-clicked: #212129
+
+
+// цвет для border выпадающего списка:
+// linear-gradient(184deg, rgba(132, 213, 44, 0.36) 0%, rgba(23, 23, 34, 0) 100%)
 
 
 *
@@ -37,7 +45,6 @@ input
   column-gap: 16px
   max-width: 1283px
   height: 48px
-  background-color: #171722
 
   &__title
     height: 30px
@@ -88,3 +95,38 @@ input
     #search:focus
       border-color: $general-body-font
 
+  &__categories
+    display: flex
+    gap: 10px
+    height: 100%
+
+    &-button-border
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 1px
+      height: 100%
+      border-radius: 10px
+      background: $button-border-gradient
+
+    &-button-border:hover
+      cursor: pointer
+
+    &-button-border.btn-shadow
+      box-shadow: $button-shadow
+
+    &-button
+      display: flex
+      height: 100%
+      padding: 11px 19px
+      gap: 10px
+      background-color: $unactive-input
+      border-radius: 10px
+
+    &-button.btn-clicked
+      background-color: $button-clicked
+
+    &-button span
+      font-weight: 700
+      font-size: 18px
+      line-height: 135%
